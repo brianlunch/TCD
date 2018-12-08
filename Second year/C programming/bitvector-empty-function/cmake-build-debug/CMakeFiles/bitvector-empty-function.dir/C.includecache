@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/brian/CLionProjects/bitvector-empty-function/bitset.c
+stdlib.h
+-
+assert.h
+-
+stdio.h
+-
+bitset.h
+C:/Users/brian/CLionProjects/bitvector-empty-function/bitset.h
+
+C:/Users/brian/CLionProjects/bitvector-empty-function/bitset.h
+
+C:/Users/brian/CLionProjects/bitvector-empty-function/bloom.c
+stdlib.h
+-
+bloom.h
+C:/Users/brian/CLionProjects/bitvector-empty-function/bloom.h
+
+C:/Users/brian/CLionProjects/bitvector-empty-function/bloom.h
+bitset.h
+C:/Users/brian/CLionProjects/bitvector-empty-function/bitset.h
+
+C:/Users/brian/CLionProjects/bitvector-empty-function/main.c
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+assert.h
+-
+bitset.h
+C:/Users/brian/CLionProjects/bitvector-empty-function/bitset.h
+bloom.h
+C:/Users/brian/CLionProjects/bitvector-empty-function/bloom.h
+

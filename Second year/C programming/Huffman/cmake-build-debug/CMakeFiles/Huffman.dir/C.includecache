@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/brian/CLionProjects/Huffman/huff.c
+stdio.h
+-
+stdlib.h
+-
+assert.h
+-
+ctype.h
+-
+huff.h
+C:/Users/brian/CLionProjects/Huffman/huff.h
+
+C:/Users/brian/CLionProjects/Huffman/huff.h
+

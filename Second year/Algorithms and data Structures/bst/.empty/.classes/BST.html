@@ -1,0 +1,379 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: BST</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">&lt;empty package name&gt;</a> ]
+</div>
+
+<h1>Coverage Summary for Class: BST (&lt;empty package name&gt;)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">BST</td>
+<td class="coverageStat">
+  <span class="percent">
+    95.5%
+  </span>
+  <span class="absValue">
+    (21/ 22)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    96.5%
+  </span>
+  <span class="absValue">
+    (83/ 86)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">BST$Node</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (6/ 6)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    95.8%
+  </span>
+  <span class="absValue">
+    (23/ 24)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    96.7%
+  </span>
+  <span class="absValue">
+    (89/ 92)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;/*************************************************************************
+<i>2</i>&nbsp; *  Binary Search Tree class.
+<i>3</i>&nbsp; *  Adapted from Sedgewick and Wayne.
+<i>4</i>&nbsp; *
+<i>5</i>&nbsp; *  @version 3.0 1/11/15 16:49:42
+<i>6</i>&nbsp; *
+<i>7</i>&nbsp; *  @author BRIAN LYNCH
+<i>8</i>&nbsp; *
+<i>9</i>&nbsp; *************************************************************************/
+<i>10</i>&nbsp;
+<i>11</i>&nbsp;import java.util.NoSuchElementException;
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;import static java.lang.Math.max;
+<i>14</i>&nbsp;
+<i>15</i>&nbsp;
+<b class="fc"><i>16</i>&nbsp;public class BST&lt;Key extends Comparable&lt;Key&gt;, Value&gt; {</b>
+<i>17</i>&nbsp;    private Node root;             // root of BST
+<i>18</i>&nbsp;
+<i>19</i>&nbsp;    /**
+<i>20</i>&nbsp;     * Private node class.
+<i>21</i>&nbsp;     */
+<b class="fc"><i>22</i>&nbsp;    private class Node {</b>
+<i>23</i>&nbsp;        private Key key;           // sorted by key
+<i>24</i>&nbsp;        private Value val;         // associated data
+<i>25</i>&nbsp;        private Node left, right;  // left and right subtrees
+<i>26</i>&nbsp;        private int N;             // number of nodes in subtree
+<i>27</i>&nbsp;
+<b class="fc"><i>28</i>&nbsp;        public Node(Key key, Value val, int N) {</b>
+<b class="fc"><i>29</i>&nbsp;            this.key = key;</b>
+<b class="fc"><i>30</i>&nbsp;            this.val = val;</b>
+<b class="fc"><i>31</i>&nbsp;            this.N = N;</b>
+<b class="fc"><i>32</i>&nbsp;        }</b>
+<i>33</i>&nbsp;    }
+<i>34</i>&nbsp;
+<i>35</i>&nbsp;    // is the symbol table empty?
+<i>36</i>&nbsp;    public boolean isEmpty() {
+<b class="fc"><i>37</i>&nbsp;        return size() == 0;</b>
+<i>38</i>&nbsp;    }
+<i>39</i>&nbsp;
+<i>40</i>&nbsp;    // return number of key-value pairs in BST
+<i>41</i>&nbsp;    public int size() {
+<b class="fc"><i>42</i>&nbsp;        return size(root);</b>
+<i>43</i>&nbsp;    }
+<i>44</i>&nbsp;
+<i>45</i>&nbsp;    // return number of key-value pairs in BST rooted at x
+<i>46</i>&nbsp;    private int size(Node x) {
+<b class="fc"><i>47</i>&nbsp;        if (x == null) return 0;</b>
+<b class="fc"><i>48</i>&nbsp;        else return x.N;</b>
+<i>49</i>&nbsp;    }
+<i>50</i>&nbsp;
+<i>51</i>&nbsp;    /**
+<i>52</i>&nbsp;     * Search BST for given key.
+<i>53</i>&nbsp;     * Does there exist a key-value pair with given key?
+<i>54</i>&nbsp;     *
+<i>55</i>&nbsp;     * @param key the search key
+<i>56</i>&nbsp;     * @return true if key is found and false otherwise
+<i>57</i>&nbsp;     */
+<i>58</i>&nbsp;    public boolean contains(Key key) {
+<b class="nc"><i>59</i>&nbsp;        return get(key) != null;</b>
+<i>60</i>&nbsp;    }
+<i>61</i>&nbsp;
+<i>62</i>&nbsp;    /**
+<i>63</i>&nbsp;     * Search BST for given key.
+<i>64</i>&nbsp;     * What is the value associated with given key?
+<i>65</i>&nbsp;     *
+<i>66</i>&nbsp;     * @param key the search key
+<i>67</i>&nbsp;     * @return value associated with the given key if found, or null if no such key exists.
+<i>68</i>&nbsp;     */
+<i>69</i>&nbsp;    public Value get(Key key) {
+<b class="fc"><i>70</i>&nbsp;        return get(root, key);</b>
+<i>71</i>&nbsp;    }
+<i>72</i>&nbsp;
+<i>73</i>&nbsp;    private Value get(Node x, Key key) {
+<b class="fc"><i>74</i>&nbsp;        if (x == null) return null;</b>
+<b class="fc"><i>75</i>&nbsp;        int cmp = key.compareTo(x.key);</b>
+<b class="fc"><i>76</i>&nbsp;        if (cmp &lt; 0) return get(x.left, key);</b>
+<b class="fc"><i>77</i>&nbsp;        else if (cmp &gt; 0) return get(x.right, key);</b>
+<b class="fc"><i>78</i>&nbsp;        else return x.val;</b>
+<i>79</i>&nbsp;    }
+<i>80</i>&nbsp;
+<i>81</i>&nbsp;    /**
+<i>82</i>&nbsp;     * Insert key-value pair into BST.
+<i>83</i>&nbsp;     * If key already exists, update with new value.
+<i>84</i>&nbsp;     *
+<i>85</i>&nbsp;     * @param key the key to insert
+<i>86</i>&nbsp;     * @param val the value associated with key
+<i>87</i>&nbsp;     */
+<i>88</i>&nbsp;    public void put(Key key, Value val) {
+<b class="fc"><i>89</i>&nbsp;        if (val == null) {</b>
+<b class="nc"><i>90</i>&nbsp;            delete(key);</b>
+<b class="nc"><i>91</i>&nbsp;            return;</b>
+<i>92</i>&nbsp;        }
+<b class="fc"><i>93</i>&nbsp;        root = put(root, key, val);</b>
+<b class="fc"><i>94</i>&nbsp;    }</b>
+<i>95</i>&nbsp;
+<i>96</i>&nbsp;    private Node put(Node x, Key key, Value val) {
+<b class="fc"><i>97</i>&nbsp;        if (x == null) return new Node(key, val, 1);</b>
+<b class="fc"><i>98</i>&nbsp;        int cmp = key.compareTo(x.key);</b>
+<b class="fc"><i>99</i>&nbsp;        if (cmp &lt; 0) x.left = put(x.left, key, val);</b>
+<b class="fc"><i>100</i>&nbsp;        else if (cmp &gt; 0) x.right = put(x.right, key, val);</b>
+<b class="fc"><i>101</i>&nbsp;        else x.val = val;</b>
+<b class="fc"><i>102</i>&nbsp;        x.N = 1 + size(x.left) + size(x.right);</b>
+<b class="fc"><i>103</i>&nbsp;        return x;</b>
+<i>104</i>&nbsp;    }
+<i>105</i>&nbsp;
+<i>106</i>&nbsp;    /**
+<i>107</i>&nbsp;     * Tree height.
+<i>108</i>&nbsp;     * &lt;p&gt;
+<i>109</i>&nbsp;     * Asymptotic worst-case running time using Theta notation: TODO
+<i>110</i>&nbsp;     *
+<i>111</i>&nbsp;     * @return the number of links from the root to the deepest leaf.
+<i>112</i>&nbsp;     * &lt;p&gt;
+<i>113</i>&nbsp;     * Example 1: for an empty tree this should return -1.
+<i>114</i>&nbsp;     * Example 2: for a tree with only one node it should return 0.
+<i>115</i>&nbsp;     * Example 3: for the following tree it should return 2.
+<i>116</i>&nbsp;     * B
+<i>117</i>&nbsp;     * / \
+<i>118</i>&nbsp;     * A   C
+<i>119</i>&nbsp;     * \
+<i>120</i>&nbsp;     * D
+<i>121</i>&nbsp;     */
+<i>122</i>&nbsp;    public int height() {
+<i>123</i>&nbsp;        //TODO fill in the correct implementation.
+<b class="fc"><i>124</i>&nbsp;        return height(root);</b>
+<i>125</i>&nbsp;    }
+<i>126</i>&nbsp;
+<i>127</i>&nbsp;
+<i>128</i>&nbsp;    public int height(Node node) {
+<b class="fc"><i>129</i>&nbsp;        if (isEmpty()) return -1;</b>
+<b class="fc"><i>130</i>&nbsp;        else if (size(node) == 1) return 0;</b>
+<i>131</i>&nbsp;        else {
+<b class="fc"><i>132</i>&nbsp;            int leftHeight=0;int rightHeight=0;</b>
+<b class="fc"><i>133</i>&nbsp;            if(node.left!=null)</b>
+<b class="fc"><i>134</i>&nbsp;            leftHeight = height(node.left);</b>
+<b class="fc"><i>135</i>&nbsp;            if(node.right!=null)</b>
+<b class="fc"><i>136</i>&nbsp;            rightHeight = height(node.right);</b>
+<b class="fc"><i>137</i>&nbsp;            return Math.max(leftHeight,rightHeight)+1;</b>
+<i>138</i>&nbsp;        }
+<i>139</i>&nbsp;    }
+<i>140</i>&nbsp;
+<i>141</i>&nbsp;    /**
+<i>142</i>&nbsp;     * Median key.
+<i>143</i>&nbsp;     * If the tree has N keys k1 &lt; k2 &lt; k3 &lt; ... &lt; kN, then their median key
+<i>144</i>&nbsp;     * is the element at position (N+1)/2 (where &quot;/&quot; here is integer division)
+<i>145</i>&nbsp;     *
+<i>146</i>&nbsp;     * @return the median key, or null if the tree is empty.
+<i>147</i>&nbsp;     */
+<i>148</i>&nbsp;    public Key median() {
+<b class="fc"><i>149</i>&nbsp;        if (isEmpty()) return null;</b>
+<i>150</i>&nbsp;        //TODO fill in the correct implementation. The running time should be Theta(h), where h is the height of the tree.
+<b class="fc"><i>151</i>&nbsp;        int key = (size()-1)/2;</b>
+<b class="fc"><i>152</i>&nbsp;        return select(key);</b>
+<i>153</i>&nbsp;    }
+<i>154</i>&nbsp;
+<i>155</i>&nbsp;    public Key select(int n) {
+<b class="fc"><i>156</i>&nbsp;        if (n &lt; 0 || n &gt;= size()) return null;</b>
+<b class="fc"><i>157</i>&nbsp;        Node x = select(root, n);</b>
+<b class="fc"><i>158</i>&nbsp;        return x.key;</b>
+<i>159</i>&nbsp;    }
+<i>160</i>&nbsp;    private Node select(Node x, int n) {
+<b class="fc"><i>161</i>&nbsp;        if (x == null) return null;</b>
+<b class="fc"><i>162</i>&nbsp;        int t = size(x.left);</b>
+<b class="fc"><i>163</i>&nbsp;        if (t &gt; n) return select(x.left, n);</b>
+<b class="fc"><i>164</i>&nbsp;        else if (t &lt; n) return select(x.right, n-t-1);</b>
+<b class="fc"><i>165</i>&nbsp;        else return x;</b>
+<i>166</i>&nbsp;    }
+<i>167</i>&nbsp;
+<i>168</i>&nbsp;    /**
+<i>169</i>&nbsp;     * Print all keys of the tree in a sequence, in-order.
+<i>170</i>&nbsp;     * That is, for each node, the keys in the left subtree should appear before the key in the node.
+<i>171</i>&nbsp;     * Also, for each node, the keys in the right subtree should appear before the key in the node.
+<i>172</i>&nbsp;     * For each subtree, its keys should appear within a parenthesis.
+<i>173</i>&nbsp;     * &lt;p&gt;
+<i>174</i>&nbsp;     * Example 1: Empty tree -- output: &quot;()&quot;
+<i>175</i>&nbsp;     * Example 2: Tree containing only &quot;A&quot; -- output: &quot;(()A())&quot;
+<i>176</i>&nbsp;     * Example 3: Tree:
+<i>177</i>&nbsp;     *  B
+<i>178</i>&nbsp;     * / \
+<i>179</i>&nbsp;     * A   C
+<i>180</i>&nbsp;     * \
+<i>181</i>&nbsp;     * D
+<i>182</i>&nbsp;     * &lt;p&gt;
+<i>183</i>&nbsp;     * output: &quot;((()A())B(()C(()D())))&quot;
+<i>184</i>&nbsp;     * &lt;p&gt;
+<i>185</i>&nbsp;     * output of example in the assignment: (((()A(()C()))E((()H(()M()))R()))S(()X()))
+<i>186</i>&nbsp;     *
+<i>187</i>&nbsp;     * @return a String with all keys in the tree, in order, parenthesized.
+<i>188</i>&nbsp;     */
+<i>189</i>&nbsp;    public String printKeysInOrder() {
+<b class="fc"><i>190</i>&nbsp;        if (isEmpty()) return &quot;()&quot;;</b>
+<i>191</i>&nbsp;        // TODO fill in the correct implementation
+<b class="fc"><i>192</i>&nbsp;        StringBuilder string = new StringBuilder();</b>
+<b class="fc"><i>193</i>&nbsp;        string.append(&quot;(&quot;);</b>
+<b class="fc"><i>194</i>&nbsp;        printKeysInOrder(root, string);</b>
+<b class="fc"><i>195</i>&nbsp;        string.append(&quot;)&quot;);</b>
+<b class="fc"><i>196</i>&nbsp;        return string.toString();</b>
+<i>197</i>&nbsp;    }
+<i>198</i>&nbsp;    private void printKeysInOrder(Node node,StringBuilder strinh){
+<b class="fc"><i>199</i>&nbsp;        strinh.append(&quot;(&quot;);</b>
+<b class="fc"><i>200</i>&nbsp;        if (node.left!=null)</b>
+<b class="fc"><i>201</i>&nbsp;            printKeysInOrder(node.left, strinh);</b>
+<b class="fc"><i>202</i>&nbsp;        strinh.append(&quot;)&quot;);</b>
+<b class="fc"><i>203</i>&nbsp;         strinh.append( node.val.toString());</b>
+<b class="fc"><i>204</i>&nbsp;         strinh.append(&quot;(&quot;);</b>
+<b class="fc"><i>205</i>&nbsp;        if(node.right!=null)</b>
+<b class="fc"><i>206</i>&nbsp;            printKeysInOrder(node.right,strinh);</b>
+<b class="fc"><i>207</i>&nbsp;        strinh.append(&quot;)&quot;);</b>
+<b class="fc"><i>208</i>&nbsp;    }</b>
+<i>209</i>&nbsp;
+<i>210</i>&nbsp;    /**
+<i>211</i>&nbsp;     * Pretty Printing the tree. Each node is on one line -- see assignment for details.
+<i>212</i>&nbsp;     *
+<i>213</i>&nbsp;     * @return a multi-line string with the pretty ascii picture of the tree.
+<i>214</i>&nbsp;     */
+<i>215</i>&nbsp;    public String prettyPrintKeys() {
+<i>216</i>&nbsp;        //TODO fill in the correct implementation.
+<i>217</i>&nbsp;        //if (isEmpty()) return &quot;-null\n&quot;;
+<b class="fc"><i>218</i>&nbsp;        return prettyPrintKeys(this.root, &quot;&quot;);</b>
+<i>219</i>&nbsp;    }
+<i>220</i>&nbsp;
+<i>221</i>&nbsp;    private String prettyPrintKeys(Node node, String returnString) {
+<b class="fc"><i>222</i>&nbsp;        if (node == null) {</b>
+<b class="fc"><i>223</i>&nbsp;            return  returnString + &quot;-null\n&quot;;</b>
+<i>224</i>&nbsp;        }
+<i>225</i>&nbsp;
+<b class="fc"><i>226</i>&nbsp;        String resultString = returnString + &quot;-&quot; + node.key.toString() + &quot;\n&quot; + prettyPrintKeys(node.left, returnString + &quot; |&quot;)</b>
+<b class="fc"><i>227</i>&nbsp;                + prettyPrintKeys(node.right, returnString + &quot;  &quot;);</b>
+<b class="fc"><i>228</i>&nbsp;        return resultString;</b>
+<i>229</i>&nbsp;    }
+<i>230</i>&nbsp;
+<i>231</i>&nbsp;    /**
+<i>232</i>&nbsp;     * Deteles a key from a tree (if the key is in the tree).
+<i>233</i>&nbsp;     * Note that this method works symmetrically from the Hibbard deletion:
+<i>234</i>&nbsp;     * If the node to be deleted has two child nodes, then it needs to be
+<i>235</i>&nbsp;     * replaced with its predecessor (not its successor) node.
+<i>236</i>&nbsp;     *
+<i>237</i>&nbsp;     * @param key the key to delete
+<i>238</i>&nbsp;     */
+<i>239</i>&nbsp;    public void delete(Key key) {
+<b class="fc"><i>240</i>&nbsp;        root = delete(root, key);</b>
+<b class="fc"><i>241</i>&nbsp;    }</b>
+<i>242</i>&nbsp;    public Node delete(Node node, Key key) {
+<b class="fc"><i>243</i>&nbsp;        if (node == null) return null;</b>
+<b class="fc"><i>244</i>&nbsp;        int cmp = key.compareTo(node.key);</b>
+<b class="fc"><i>245</i>&nbsp;        if (cmp &lt; 0) node.left = delete(node.left, key);</b>
+<b class="fc"><i>246</i>&nbsp;        else if (cmp &gt; 0) node.right = delete(node.right, key);</b>
+<i>247</i>&nbsp;        else {
+<b class="fc"><i>248</i>&nbsp;            if (node.right == null) return node.left;</b>
+<b class="fc"><i>249</i>&nbsp;            if (node.left == null) return node.right;</b>
+<b class="fc"><i>250</i>&nbsp;            Node t = node;</b>
+<b class="fc"><i>251</i>&nbsp;            node = max(t.left);</b>
+<b class="fc"><i>252</i>&nbsp;            node.left = deleteMax(t.left);</b>
+<b class="fc"><i>253</i>&nbsp;            node.right = t.right;</b>
+<i>254</i>&nbsp;        }
+<b class="fc"><i>255</i>&nbsp;        node.N = size(node.left) + size(node.right) + 1;</b>
+<b class="fc"><i>256</i>&nbsp;        return node;</b>
+<i>257</i>&nbsp;    }
+<i>258</i>&nbsp;
+<i>259</i>&nbsp;    private Node max(Node node) {
+<b class="fc"><i>260</i>&nbsp;        if (node.right == null) return node;</b>
+<b class="fc"><i>261</i>&nbsp;        else return max(node.right);</b>
+<i>262</i>&nbsp;    }
+<i>263</i>&nbsp;
+<i>264</i>&nbsp;    private Node deleteMax(Node node) {
+<b class="fc"><i>265</i>&nbsp;        if (node.right == null) return node.left;</b>
+<b class="fc"><i>266</i>&nbsp;        node.right = deleteMax(node.right);</b>
+<b class="fc"><i>267</i>&nbsp;        node.N = 1 + size(node.right) + size(node.left);</b>
+<b class="fc"><i>268</i>&nbsp;        return node;</b>
+<i>269</i>&nbsp;    }
+<i>270</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-11-23 22:50</div>
+</div>
+</body>
+</html>
