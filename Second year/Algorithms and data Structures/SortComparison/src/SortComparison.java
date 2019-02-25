@@ -1,6 +1,80 @@
 // -------------------------------------------------------------------------
 
-import java.util.Arrays;
+/*
+*   All measuremnts are in ms
+*
+*  insertion sort
+*       10 random - 0.008576286
+ *       100 random - 0.158044429
+ *       1000 random - 4.923271857
+ *       1000 few unique - 5.1824
+ *       1000 nearly ordered - 0.060952429
+ *       1000 reverse order - 0.784558286
+ *       1000 sorted - 0.003883714
+ *
+ *  selection sort
+ *       10 random - 0.006796571
+ *       100 random - 0.169048
+ *       1000 random - 20.63164471
+ *       1000 few unique - 2.089799857
+ *       1000 nearly ordered - 1.629853
+ *       1000 reverse order - 2.511287571
+ *       1000 sorted - 1.861741429
+ *
+*
+ *  quick sort
+ *       10 random - 0.011813
+ *       100 random - 0.064728
+ *       1000 random - 0.974858857
+ *       1000 few unique - 0.186794571
+ *       1000 nearly ordered - 0.235664143
+ *       1000 reverse order - 1.124488429
+ *       1000 sorted - 1.327681143
+ *
+ *
+ *  merge sort recursive
+ *       10 random - 0.015102857
+ *       100 random - 0.144343571
+ *       1000 random - 0.984976
+ *       1000 few unique - 0.168994286
+ *       1000 nearly ordered - 0.156965429
+ *       1000 reverse order - 0.081611286
+ *       1000 sorted - 0.079993286
+
+ *
+ *  merge sort iterative
+ *       10 random - 0.070607571
+ *       100 random - 0.106747714
+ *       1000 random - 3.197944714
+ *       1000 few unique - 0.299475
+ *       1000 nearly ordered - 0.231348571
+ *       1000 reverse order - 0.146555143
+ *       1000 sorted - 0.241867571
+
+ *
+ *
+ *      a -
+ *
+ *      b - Selection sort as it has an O(n^2) in all cases
+ *
+ *      c - Best - Quick Sort
+ *          Worst - Selection Sort
+ *
+ *      d - Ìterative takes a lot longer when the data is larger and random
+ *
+ *      e - 10 random - selection sort
+ *          100 random - quick sort
+ *          1000 random - quick sort
+ *          1000 few unique - merge sort recursive
+ *          1000 nearly ordered - insertion sort
+ *          1000 reverse order - merge sort recursive
+ *          1000 sorted - insertion sort
+ */
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  *  This class contains static methods that implementing sorting of an array of numbers
@@ -181,8 +255,83 @@ class SortComparison {
 
 
     public static void main(String[] args) {
-        //todo: do experiments as per assignment instructions
-    
-    }
+        String[] files = new String[]{"/users/brian/numbers10.txt","/users/brian/numbers100.txt",
+                "/users/brian/numbers1000.txt", "/users/brian/numbers1000Duplicates.txt","/users/brian/numbersNearlyOrdered1000.txt",
+        "/users/brian/numbersReverse1000.txt", "/users/brian/numbersSorted1000.txt"};
 
+        for (String file : files) {
+            ArrayList<Double> doubles = new ArrayList<>();
+            try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+                String line = br.readLine();
+                while (line != null) {
+                    line = br.readLine();
+                    if (line != null) doubles.add(Double.parseDouble(line));
+                }
+
+                double[] a = resetArray(doubles);
+                //System.out.println("Selection Sort: ");
+                //printArray(a);
+                double startTime = System.nanoTime();
+                selectionSort(a);
+                double endTime = System.nanoTime();
+                double duration = (endTime - startTime) / 1000000;
+                //printArray(a);
+                System.out.println("Selection Sort time for " + file.split("/")[file.split("/").length - 1] + ": " + duration + "ms");
+
+                a = resetArray(doubles);
+                //System.out.println("Insertion Sort: ");
+                //printArray(a);
+                startTime = System.nanoTime();
+                insertionSort(a);
+                endTime = System.nanoTime();
+                duration = (endTime - startTime) / 1000000;
+                //printArray(a);
+                System.out.println("Insertion Sort time for " + file.split("/")[file.split("/").length - 1] + ": " + duration + "ms");
+
+                a = resetArray(doubles);
+                //System.out.println("MergeSort Iterative: ");
+                //printArray(a);
+                startTime = System.nanoTime();
+                mergeSortIterative(a);
+                endTime = System.nanoTime();
+                duration = (endTime - startTime) / 1000000;
+                //printArray(a);
+                System.out.println("MergeSort Iterative time for " + file.split("/")[file.split("/").length - 1] + " was " + duration + "ms");
+
+
+                a = resetArray(doubles);
+                //System.out.println("MergeSort Recursive: ");
+                //printArray(a);
+                startTime = System.nanoTime();
+                mergeSortRecursive(a);
+                endTime = System.nanoTime();
+                duration = (endTime - startTime) / 1000000;
+                //printArray(a);
+                System.out.println("MergeSort Recursive time for " + file.split("/")[file.split("/").length - 1] + ": " + duration + "ms");
+
+                a = resetArray(doubles);
+                //System.out.println("QuickSort: ");
+                //printArray(a);
+                startTime = System.nanoTime();
+                quickSort(a);
+                endTime = System.nanoTime();
+                duration = (endTime - startTime) / 1000000;
+                //printArray(a);
+                System.out.println("QuickSort time for " + file.split("/")[file.split("/").length - 1] + ": " + duration + "ms");
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+    }
+    private static double[] resetArray(ArrayList<Double> doubles) {
+        double[] a;
+        a = new double[doubles.size()];
+        for (int j = 0; j < a.length; j++) {
+            a[j] = doubles.get(j);
+        }
+        return a;
+    }
 }//end class
