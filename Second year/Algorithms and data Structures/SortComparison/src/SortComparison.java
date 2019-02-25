@@ -46,11 +46,39 @@ class SortComparison {
      *
      */
     static double [] quickSort (double a[]){
-
-
-
+        quickSortR(a,0,a.length-1);
+        return a;
     }//end quicksort
 
+    private static void quickSortR(double arr[], int begin, int end) {
+        if (begin < end) {
+            int partitionIndex = partition(arr, begin, end);
+
+            quickSortR(arr, begin, partitionIndex-1);
+            quickSortR(arr, partitionIndex+1, end);
+        }
+    }
+
+    private static int partition(double arr[], int begin, int end) {
+        double pivot = arr[end];
+        int i = (begin-1);
+
+        for (int j = begin; j < end; j++) {
+            if (arr[j] <= pivot) {
+                i++;
+
+                double swapTemp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = swapTemp;
+            }
+        }
+
+        double swapTemp = arr[i+1];
+        arr[i+1] = arr[end];
+        arr[end] = swapTemp;
+
+        return i+1;
+    }
     /**
      * Sorts an array of doubles using Merge Sort.
      * This method is static, thus it can be called as SortComparison.sort(a)
@@ -254,7 +282,24 @@ class SortComparison {
     static double [] selectionSort (double a[]){
 
         //todo: implement the sort
+        int n = a.length;
 
+        // One by one move boundary of unsorted subarray
+        for (int i = 0; i < n-1; i++)
+        {
+            // Find the minimum element in unsorted array
+            int min_idx = i;
+            for (int j = i+1; j < n; j++)
+                if (a[j] < a[min_idx])
+                    min_idx = j;
+
+            // Swap the found minimum element with the first
+            // element
+            double temp = a[min_idx];
+            a[min_idx] = a[i];
+            a[i] = temp;
+        }
+        return a;
     }//end selectionsort
 
 
