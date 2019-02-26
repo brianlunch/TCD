@@ -53,12 +53,12 @@
 
  *
  *
- *      a -
+ *      a - Insertion, selection and quick...the reverse order and nearly order have very different run times as there are more steps involved (iterations)
  *
  *      b - Selection sort as it has an O(n^2) in all cases
  *
  *      c - Best - Quick Sort
- *          Worst - Selection Sort
+ *          Worst - Selection Sort - bc its O(n^2)
  *
  *      d - Ìterative takes a lot longer when the data is larger and random
  *
@@ -89,27 +89,25 @@ class SortComparison {
     /**
      * Sorts an array of doubles using InsertionSort.
      * This method is static, thus it can be called as SortComparison.sort(a)
+     *
      * @param a: An unsorted array of doubles.
      * @return array sorted in ascending order.
-     *
      */
-    static double [] insertionSort (double a[]){
+    static double[] insertionSort(double a[]) {
 
         int n = a.length;
-        for (int i=1; i<n; ++i)
-        {
+        for (int i = 1; i < n; ++i) {
             double key = a[i];
-            int j = i-1;
+            int j = i - 1;
 
             /* Move elements of arr[0..i-1], that are
                greater than key, to one position ahead
                of their current position */
-            while (j>=0 && a[j] > key)
-            {
-                a[j+1] = a[j];
-                j = j-1;
+            while (j >= 0 && a[j] > key) {
+                a[j + 1] = a[j];
+                j = j - 1;
             }
-            a[j+1] = key;
+            a[j + 1] = key;
         }
         return a;
     }//end insertionsort
@@ -117,12 +115,12 @@ class SortComparison {
     /**
      * Sorts an array of doubles using Quick Sort.
      * This method is static, thus it can be called as SortComparison.sort(a)
+     *
      * @param a: An unsorted array of doubles.
      * @return array sorted in ascending order
-     *
      */
-    static double [] quickSort (double a[]){
-        quickSortR(a,0,a.length-1);
+    static double[] quickSort(double a[]) {
+        quickSortR(a, 0, a.length - 1);
         return a;
     }//end quicksort
 
@@ -130,14 +128,14 @@ class SortComparison {
         if (begin < end) {
             int partitionIndex = partition(arr, begin, end);
 
-            quickSortR(arr, begin, partitionIndex-1);
-            quickSortR(arr, partitionIndex+1, end);
+            quickSortR(arr, begin, partitionIndex - 1);
+            quickSortR(arr, partitionIndex + 1, end);
         }
     }
 
     private static int partition(double arr[], int begin, int end) {
         double pivot = arr[end];
-        int i = (begin-1);
+        int i = (begin - 1);
 
         for (int j = begin; j < end; j++) {
             if (arr[j] <= pivot) {
@@ -149,11 +147,11 @@ class SortComparison {
             }
         }
 
-        double swapTemp = arr[i+1];
-        arr[i+1] = arr[end];
+        double swapTemp = arr[i + 1];
+        arr[i + 1] = arr[end];
         arr[end] = swapTemp;
 
-        return i+1;
+        return i + 1;
     }
     /**
      * Sorts an array of doubles using Merge Sort.
@@ -170,18 +168,17 @@ class SortComparison {
      * @return after the method returns, the array must be in ascending sorted order.
      */
 
-    static double[] mergeSortIterative (double a[]) {
+    static double[] mergeSortIterative(double a[]) {
         int length = a.length;
         double[] aux = new double[length];
         for (int i = 1; i < length; i = i + i) {
             for (int low = 0; low < length - i; low += i + i) {
-                merge(a, aux, low, low+i-1, Math.min(low+i+i-1,length-1));
+                merge(a, aux, low, low + i - 1, Math.min(low + i + i - 1, length - 1));
             }
         }
         return a;
 
     }//end mergeSortIterative
-
 
 
     /**
@@ -191,9 +188,9 @@ class SortComparison {
      * @param a: An unsorted array of doubles.
      * @return after the method returns, the array must be in ascending sorted order.
      */
-    static double[] mergeSortRecursive (double a[]) {
+    static double[] mergeSortRecursive(double a[]) {
         double[] aux = new double[a.length];
-        sort(a, aux, 0, a.length-1);
+        sort(a, aux, 0, a.length - 1);
         return a;
 
     }
@@ -204,7 +201,7 @@ class SortComparison {
         }
         int mid = low + (high - low) / 2;
         sort(a, aux, low, mid);
-        sort(a, aux, mid+1, high);
+        sort(a, aux, mid + 1, high);
         merge(a, aux, low, mid, high);
     }
 
@@ -215,12 +212,12 @@ class SortComparison {
         }
 
         //merge
-        int i = low, j = mid+1;
+        int i = low, j = mid + 1;
         for (int k = low; k <= high; k++) {
-            if      (i > mid)           a[k] = aux[j++];
-            else if (j > high)          a[k] = aux[i++];
-            else if (aux[j] < aux[i])   a[k] = aux[j++];
-            else                        a[k] = aux[i++];
+            if (i > mid) a[k] = aux[j++];
+            else if (j > high) a[k] = aux[i++];
+            else if (aux[j] < aux[i]) a[k] = aux[j++];
+            else a[k] = aux[i++];
         }
     }
     //end mergeSortRecursive
@@ -229,15 +226,15 @@ class SortComparison {
     /**
      * Sorts an array of doubles using Selection Sort.
      * This method is static, thus it can be called as SortComparison.sort(a)
+     *
      * @param a: An unsorted array of doubles.
      * @return array sorted in ascending order
-     *
      */
-    static double [] selectionSort (double a[]){
+    static double[] selectionSort(double a[]) {
         int length = a.length;
-        for (int i = 0; i < length-1; i++) {
+        for (int i = 0; i < length - 1; i++) {
             int minIndex = i;
-            for (int j = i+1; j < length; j++) {
+            for (int j = i + 1; j < length; j++) {
                 if (a[j] < a[minIndex]) {
                     minIndex = j;
                 }
@@ -252,9 +249,8 @@ class SortComparison {
     }//end selectionsort
 
 
-
-
     public static void main(String[] args) {
+/*
         String[] files = new String[]{"/users/brian/numbers10.txt","/users/brian/numbers100.txt",
                 "/users/brian/numbers1000.txt", "/users/brian/numbers1000Duplicates.txt","/users/brian/numbersNearlyOrdered1000.txt",
         "/users/brian/numbersReverse1000.txt", "/users/brian/numbersSorted1000.txt"};
@@ -323,9 +319,8 @@ class SortComparison {
                 e.printStackTrace();
             }
         }
-
-
     }
+
     private static double[] resetArray(ArrayList<Double> doubles) {
         double[] a;
         a = new double[doubles.size()];
@@ -334,4 +329,6 @@ class SortComparison {
         }
         return a;
     }
-}//end class
+*/
+    }//end class
+}

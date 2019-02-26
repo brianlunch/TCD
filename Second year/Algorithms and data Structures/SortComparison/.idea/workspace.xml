@@ -11,17 +11,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/SortComparison$SortComparisonTest.coverage" NAME="SortComparisonTest Coverage Results" MODIFIED="1551112236904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SortComparison$SortComparisonTest.coverage" NAME="SortComparisonTest Coverage Results" MODIFIED="1551190560090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SortComparison$SortComparison.coverage" NAME="SortComparison Coverage Results" MODIFIED="1551190492250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="SortComparison.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SortComparison.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="321" column="21" lean-forward="false" selection-start-line="321" selection-start-column="21" selection-end-line="321" selection-end-column="21" />
+            <state relative-caret-position="1377">
+              <caret line="81" column="2" lean-forward="true" selection-start-line="81" selection-start-column="2" selection-end-line="81" selection-end-column="2" />
               <folding>
-                <element signature="e#0#10875#0" expanded="true" />
+                <element signature="e#0#11022#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -31,8 +32,8 @@
       <file leaf-file-name="SortComparisonTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SortComparisonTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="100" column="1" lean-forward="false" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
+            <state relative-caret-position="-1016">
+              <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#554#555#0" expanded="true" />
@@ -92,7 +93,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -109,9 +109,10 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -143,7 +144,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SortComparison">
+  <component name="RunManager" selected="JUnit.SortComparisonTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -286,8 +287,8 @@
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.SortComparison" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SortComparisonTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SortComparisonTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.SortComparison" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.SortComparisonTest.testSorts" />
       </list>
     </recent_temporary>
@@ -307,29 +308,12 @@
       <updated>1550843348199</updated>
       <workItem from="1550843354099" duration="978000" />
       <workItem from="1550844679465" duration="2610000" />
-      <workItem from="1551087663139" duration="14291000" />
+      <workItem from="1551087663139" duration="14544000" />
+      <workItem from="1551190297509" duration="2444000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SortComparisonTest - 2019.02.25 at 10h 36m 30s.xml">
-      <configuration name="SortComparisonTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SortComparisonTest - 2019.02.25 at 10h 38m 06s.xml">
-      <configuration name="SortComparisonTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SortComparisonTest - 2019.02.25 at 10h 39m 53s.xml">
-      <configuration name="SortComparisonTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SortComparisonTest - 2019.02.25 at 10h 41m 42s.xml">
-      <configuration name="SortComparisonTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SortComparisonTest - 2019.02.25 at 16h 08m 15s.xml">
-      <configuration name="SortComparisonTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SortComparisonTest - 2019.02.25 at 16h 08m 22s.xml">
-      <configuration name="SortComparisonTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SortComparisonTest - 2019.02.25 at 16h 24m 01s.xml">
       <configuration name="SortComparisonTest" configurationId="JUnit" />
     </history-entry>
@@ -342,9 +326,27 @@
     <history-entry file="SortComparisonTest - 2019.02.25 at 17h 07m 00s.xml">
       <configuration name="SortComparisonTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SortComparisonTest - 2019.02.26 at 14h 15m 18s.xml">
+      <configuration name="SortComparisonTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortComparisonTest - 2019.02.26 at 14h 15m 26s.xml">
+      <configuration name="SortComparisonTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortComparisonTest - 2019.02.26 at 14h 16m 03s.xml">
+      <configuration name="SortComparisonTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortComparisonTest - 2019.02.26 at 14h 25m 50s.xml">
+      <configuration name="SortComparisonTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortComparisonTest - 2019.02.26 at 14h 27m 31s.xml">
+      <configuration name="SortComparisonTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortComparisonTest - 2019.02.26 at 14h 28m 08s.xml">
+      <configuration name="SortComparisonTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17879000" />
+    <option name="totallyTimeSpent" value="20576000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -360,11 +362,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.109350234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13103953" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07906296" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -393,10 +395,33 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/SortComparison.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11022#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SortComparisonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="100" column="1" lean-forward="false" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SortComparison.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="46" column="7" lean-forward="false" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
           <folding>
-            <element signature="e#0#10875#0" expanded="true" />
+            <element signature="e#0#11022#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -419,7 +444,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10875#0" expanded="true" />
+            <element signature="e#0#11022#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -439,8 +464,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SortComparisonTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="100" column="1" lean-forward="false" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
+        <state relative-caret-position="-1016">
+          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
@@ -451,10 +476,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SortComparison.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="321" column="21" lean-forward="false" selection-start-line="321" selection-start-column="21" selection-end-line="321" selection-end-column="21" />
+        <state relative-caret-position="1377">
+          <caret line="81" column="2" lean-forward="true" selection-start-line="81" selection-start-column="2" selection-end-line="81" selection-end-column="2" />
           <folding>
-            <element signature="e#0#10875#0" expanded="true" />
+            <element signature="e#0#11022#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
