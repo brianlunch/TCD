@@ -28,8 +28,8 @@
       <file leaf-file-name="LCATest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LCATest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="51" column="17" lean-forward="true" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+            <state relative-caret-position="307">
+              <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,7 +135,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LCATest.testTwo">
+  <component name="RunManager" selected="JUnit.LCATest.testThree">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -193,6 +193,26 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LCATest" />
       <option name="METHOD_NAME" value="testOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="LCATest.testThree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Software Engineering" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LCATest" />
+      <option name="METHOD_NAME" value="testThree" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -291,17 +311,19 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.LCA$BT_NoParentPtr_Solution1" />
       <item index="1" class="java.lang.String" itemvalue="Application.Unnamed" />
       <item index="2" class="java.lang.String" itemvalue="JAR Application.Unnamed" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.LCATest.testOne" />
       <item index="4" class="java.lang.String" itemvalue="JUnit.LCATest.testTwo" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.LCATest.testThree" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.LCATest.testTwo" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.LCATest.testOne" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.LCATest.testThree" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.LCATest.testTwo" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.LCATest.testOne" />
       </list>
     </recent_temporary>
   </component>
@@ -318,7 +340,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569250823469</updated>
-      <workItem from="1569250828307" duration="3698000" />
+      <workItem from="1569250828307" duration="3907000" />
     </task>
     <servers />
   </component>
@@ -332,15 +354,19 @@
     <history-entry file="LCATest_testOne - 2019.09.23 at 17h 18m 59s.xml">
       <configuration name="LCATest.testOne" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LCATest_testThree - 2019.09.23 at 17h 27m 30s.xml">
+      <configuration name="LCATest.testThree" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="LCATest_testTwo - 2019.09.23 at 17h 23m 51s.xml">
       <configuration name="LCATest.testTwo" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3698000" />
+    <option name="totallyTimeSpent" value="3907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -395,8 +421,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LCATest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="51" column="17" lean-forward="true" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+        <state relative-caret-position="307">
+          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
           <folding />
         </state>
       </provider>
