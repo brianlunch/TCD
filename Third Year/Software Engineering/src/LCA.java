@@ -7,7 +7,7 @@ import java.util.List;
 
 public class LCA {
     // A Binary Tree node
-    static class Node {
+    public static class Node {
         int data;
         Node left, right;
 
@@ -17,7 +17,7 @@ public class LCA {
         }
     }
 
-    static class BT_NoParentPtr_Solution1 {
+    public static class BT_NoParentPtr_Solution1 {
 
         Node root;
         private List<Integer> path1 = new ArrayList<>();
