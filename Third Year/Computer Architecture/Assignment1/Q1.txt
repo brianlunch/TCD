@@ -1,0 +1,89 @@
+
+
+data 										; start of a data section
+public g 									; export variable g
+g DWORD 4 									; declare global variable g initialised to 4
+
+
+.code 										; start of a code section
+
+public      min                             ; export function name
+;ebp+8 = a
+;ebp+12 = b
+;ebp+16 = c
+
+min:        push    ebp                     ; push FP
+            mov     ebp, esp                ; set ebp
+
+            mov     eax, [ebp+8]            ; v = a
+
+            cmp     [ebp+12], eax           ; if (b < v)
+            jge     if0
+            mov     eax, [ebp+12]           ; v = b
+
+if0:       cmp     [ebp+16], eax           ; if (c < v)
+            jge     if1
+            mov     eax, [ebp+16]           ; v = c
+
+if1:       mov     esp, ebp                ; reset esp
+            pop     ebp                     ; pop old FP
+            ret                             ; return
+;
+
+
+
+
+public      p                               
+;l = ebp+20
+;k = ebp+16
+;j = ebp+12
+;i = ebp+8
+;g = 4
+;v = returnVal
+
+p:          push    ebp                     ; push FP
+            mov     ebp, esp                ; set ebp
+            sub     esp, 4                  ; space for the returned value
+            push    [ebp+20]                ; push l
+            push    [ebp+16]                ; push k
+            push    [ebp+12]                ; push j
+            push    [ebp+8]					; push i
+            push    [g]						; push Global Var g
+            call    min						; min (j,i,g)
+            add     esp, 12                 ; pop off first parameters as we dont need j, i ,g 
+            push    eax                     ; v              
+            call    min						; min(v,k,l)
+            add     esp, 12                 ; pop off parameters v,k,l(3x4)
+            mov     esp, ebp                ; reset esp
+            pop     ebp                     ; pop old FP
+            ret                             ; return
+
+
+
+
+;a=ebp+8
+;b=ebp+12
+
+public		gcd
+
+gcd:		push ebp						; push FP
+			mov ebp,esp						; set ebp
+			cmp [ebp+12], 0					;if(b==0)
+			jne else0						;{
+			mov eax, [ebp+8]				;return a;
+			jmp returnCode					;}
+
+else0:		mov eax, [ebp+8] 				;else{
+			cdq								; Found on stackOverflow, unsure why i use it 	
+			idiv [ebp+12]					; idiv function called (a%b)
+			push edx						; push result of function called
+			push [ebp+12]					; push b 
+			call gcd						; calls gcd(b, a % b);
+			add esp, 8 						; pops off  b and a % b
+
+returnCode:	mov     esp, ebp                ; reset esp
+            pop     ebp                     ; pop old FP
+            ret                             ; return
+
+
+
