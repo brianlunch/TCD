@@ -7,9 +7,12 @@ public class LCATest {
     @Test
     public void testOne() {
         LCA.BT_NoParentPtr_Solution1 tree = new LCA.BT_NoParentPtr_Solution1();
-        tree.root = new LCA.Node(1); tree.root.left = new LCA.Node(2);
-        tree.root.right = new LCA.Node(3); tree.root.left.left = new LCA.Node(4);
-        tree.root.left.right = new LCA.Node(5); tree.root.right.left = new LCA.Node(6);
+        tree.root = new LCA.Node(1);
+        tree.root.left = new LCA.Node(2);
+        tree.root.right = new LCA.Node(3);
+        tree.root.left.left = new LCA.Node(4);
+        tree.root.left.right = new LCA.Node(5);
+        tree.root.right.left = new LCA.Node(6);
         tree.root.right.right = new LCA.Node(7);
 
         /*
@@ -24,11 +27,11 @@ public class LCATest {
 
          */
 
-        assertEquals( 2,tree.findLCA(4, 5));
-        assertEquals( 2,tree.findLCA(5, 4));
-        assertEquals( 1,tree.findLCA(4, 6));
-        assertEquals( 1,tree.findLCA(2, 3));
-        assertEquals( 3,tree.findLCA(6, 7));
+        assertEquals(2, tree.findLCA(4, 5));
+        assertEquals(2, tree.findLCA(5, 4));
+        assertEquals(1, tree.findLCA(4, 6));
+        assertEquals(1, tree.findLCA(2, 3));
+        assertEquals(3, tree.findLCA(6, 7));
     }
 
     @Test
@@ -37,12 +40,12 @@ public class LCATest {
         tree.root = new LCA.Node(1);
         tree.root.left = new LCA.Node(2);
         tree.root.right = new LCA.Node(3);
-        tree.root.right.left  = new LCA.Node(4);
-        tree.root.right.right  = new LCA.Node(5);
-        tree.root.right.left.left   = new LCA.Node(6);
-        tree.root.right.left .right  = new LCA.Node(7);
-        tree.root.right.right.left  = new LCA.Node(8);
-        tree.root.right.right.right  = new LCA.Node(9);
+        tree.root.right.left = new LCA.Node(4);
+        tree.root.right.right = new LCA.Node(5);
+        tree.root.right.left.left = new LCA.Node(6);
+        tree.root.right.left.right = new LCA.Node(7);
+        tree.root.right.right.left = new LCA.Node(8);
+        tree.root.right.right.right = new LCA.Node(9);
 
         /*
 
@@ -58,21 +61,25 @@ public class LCATest {
 
          */
 
-        assertEquals( 3,tree.findLCA(4, 5));
-        assertEquals( 4,tree.findLCA(4, 6));
-        assertEquals( 1,tree.findLCA(2, 3));
-        assertEquals( 4,tree.findLCA(6, 7));
-        assertEquals( 1,tree.findLCA(6, 2));
+        assertEquals(3, tree.findLCA(4, 5));
+        assertEquals(4, tree.findLCA(4, 6));
+        assertEquals(1, tree.findLCA(2, 3));
+        assertEquals(4, tree.findLCA(6, 7));
+        assertEquals(1, tree.findLCA(6, 2));
     }
 
     @Test
     public void testThree() {
         LCA.BT_NoParentPtr_Solution1 tree = new LCA.BT_NoParentPtr_Solution1();
-        tree.root = new LCA.Node(1); tree.root.right = new LCA.Node(2);
-        tree.root.left = new LCA.Node(3); tree.root.left.left  = new LCA.Node(4);
-        tree.root.left.right  = new LCA.Node(5); tree.root.left.left.left   = new LCA.Node(6);
-        tree.root.left.left .right  = new LCA.Node(7); tree.root.left.right.left  = new LCA.Node(8);
-        tree.root.left.right.right  = new LCA.Node(9);
+        tree.root = new LCA.Node(1);
+        tree.root.right = new LCA.Node(2);
+        tree.root.left = new LCA.Node(3);
+        tree.root.left.left = new LCA.Node(4);
+        tree.root.left.right = new LCA.Node(5);
+        tree.root.left.left.left = new LCA.Node(6);
+        tree.root.left.left.right = new LCA.Node(7);
+        tree.root.left.right.left = new LCA.Node(8);
+        tree.root.left.right.right = new LCA.Node(9);
 
         /*
 
@@ -88,18 +95,19 @@ public class LCATest {
 
          */
 
-        assertEquals( 3,tree.findLCA(4, 5));
-        assertEquals( 4,tree.findLCA(4, 6));
-        assertEquals( 1,tree.findLCA(2, 3));
-        assertEquals( 4,tree.findLCA(6, 7));
-        assertEquals( 1,tree.findLCA(6, 2));
+        assertEquals(3, tree.findLCA(4, 5));
+        assertEquals(4, tree.findLCA(4, 6));
+        assertEquals(1, tree.findLCA(2, 3));
+        assertEquals(4, tree.findLCA(6, 7));
+        assertEquals(1, tree.findLCA(6, 2));
     }
 
 
     @Test
     public void testTwoNode() {
         LCA.BT_NoParentPtr_Solution1 tree = new LCA.BT_NoParentPtr_Solution1();
-        tree.root = new LCA.Node(1); tree.root.left = new LCA.Node(2);
+        tree.root = new LCA.Node(1);
+        tree.root.left = new LCA.Node(2);
 
          /*
 
@@ -110,15 +118,18 @@ public class LCATest {
 		        2
 
          */
-        assertEquals( 1,tree.findLCA(1, 2));
+        assertEquals(1, tree.findLCA(1, 2));
     }
 
     @Test
     public void testNegative() {
         LCA.BT_NoParentPtr_Solution1 tree = new LCA.BT_NoParentPtr_Solution1();
-        tree.root = new LCA.Node(-1); tree.root.left = new LCA.Node(-2);
-        tree.root.right = new LCA.Node(-3); tree.root.left.left = new LCA.Node(-4);
-        tree.root.left.right = new LCA.Node(-5); tree.root.right.left = new LCA.Node(-6);
+        tree.root = new LCA.Node(-1);
+        tree.root.left = new LCA.Node(-2);
+        tree.root.right = new LCA.Node(-3);
+        tree.root.left.left = new LCA.Node(-4);
+        tree.root.left.right = new LCA.Node(-5);
+        tree.root.right.left = new LCA.Node(-6);
         tree.root.right.right = new LCA.Node(-7);
         /*
 
@@ -132,10 +143,10 @@ public class LCATest {
 
          */
 
-        assertEquals( -2,tree.findLCA(-4, -5));
-        assertEquals( -1,tree.findLCA(-2, -3));
-        assertEquals( -3,tree.findLCA(-6, -7));
-        assertEquals(-3, tree.findLCA(-3,-3));
+        assertEquals(-2, tree.findLCA(-4, -5));
+        assertEquals(-1, tree.findLCA(-2, -3));
+        assertEquals(-3, tree.findLCA(-6, -7));
+        assertEquals(-3, tree.findLCA(-3, -3));
     }
 
     @Test
@@ -150,9 +161,12 @@ public class LCATest {
         	      1
 
          */
-        assertEquals( 1,tree.findLCA(1, 1));
+        assertEquals(1, tree.findLCA(1, 1));
     }
 
-
-
+    @Test
+    public void testEmptyDAG() {
+        DAG dag = new DAG(10);
+        assertEquals( -1, dag.LCA(5, 8));
     }
+}
