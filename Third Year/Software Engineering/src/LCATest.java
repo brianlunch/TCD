@@ -169,4 +169,17 @@ public class LCATest {
         DAG dag = new DAG(10);
         assertEquals( -1, dag.LCA(5, 8));
     }
+
+    @Test
+    public void testDAG() {
+        DAG dag = new DAG(10);
+        dag.addEdge(1, 2);
+        dag.addEdge(1, 3);
+        dag.addEdge(2, 4);
+        dag.addEdge(3, 5);
+        dag.addEdge(5, 6);
+
+        assertEquals(1,dag.LCA(6,4));
+        assertEquals(1,dag.LCA(3,4));
+    }
 }

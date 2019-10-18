@@ -4,9 +4,6 @@
     <list default="true" id="bba5cd34-f4e6-4141-ac32-f68d915dcdc6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../../Second year/Algorithms and data Structures/bst/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../Second year/Algorithms and data Structures/bst/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Software Engineering/LCA$BT_NoParentPtr_Solution1.class" afterPath="$PROJECT_DIR$/out/production/Software Engineering/LCA$BT_NoParentPtr_Solution1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Software Engineering/LCATest.class" afterPath="$PROJECT_DIR$/out/production/Software Engineering/LCATest.class" />
-      <change beforePath="$PROJECT_DIR$/src/LCA.java" afterPath="$PROJECT_DIR$/src/LCA.java" />
       <change beforePath="$PROJECT_DIR$/src/LCATest.java" afterPath="$PROJECT_DIR$/src/LCATest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,7 +22,7 @@
       <file leaf-file-name="LCA.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LCA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-526">
+            <state relative-caret-position="544">
               <caret line="34" column="68" lean-forward="false" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
               <folding>
                 <element signature="e#0#2209#0" expanded="true" />
@@ -38,8 +35,8 @@
       <file leaf-file-name="DAG.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DAG.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3026">
-              <caret line="178" column="1" lean-forward="false" selection-start-line="178" selection-start-column="1" selection-end-line="178" selection-end-column="1" />
+            <state relative-caret-position="342">
+              <caret line="142" column="18" lean-forward="false" selection-start-line="142" selection-start-column="15" selection-end-line="142" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#860#861#0" expanded="true" />
@@ -50,9 +47,6 @@
                 <element signature="e#1966#1967#0" expanded="true" />
                 <element signature="e#2003#2004#0" expanded="true" />
                 <element signature="e#2039#2040#0" expanded="true" />
-                <element signature="e#2461#2470#0" expanded="true" />
-                <element signature="e#2598#2607#0" expanded="true" />
-                <element signature="e#3862#3871#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -61,8 +55,8 @@
       <file leaf-file-name="LCATest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LCATest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="167" column="25" lean-forward="false" selection-start-line="167" selection-start-column="25" selection-end-line="167" selection-end-column="25" />
+            <state relative-caret-position="337">
+              <caret line="182" column="37" lean-forward="false" selection-start-line="182" selection-start-column="37" selection-end-line="182" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -77,6 +71,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>lca</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -128,9 +127,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,7 +146,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -178,7 +177,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LCATest.testLCADAG">
+  <component name="RunManager" selected="JUnit.LCATest.testDAG">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -248,6 +247,26 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="LCATest.testDAG" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Software Engineering" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LCATest" />
+      <option name="METHOD_NAME" value="testDAG" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="LCATest.testLCADAG" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Software Engineering" />
@@ -296,26 +315,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LCATest" />
       <option name="METHOD_NAME" value="testOneNode" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="LCATest.testThree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Software Engineering" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LCATest" />
-      <option name="METHOD_NAME" value="testThree" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -398,19 +397,19 @@
       <item index="0" class="java.lang.String" itemvalue="Application.LCA$BT_NoParentPtr_Solution1" />
       <item index="1" class="java.lang.String" itemvalue="Application.Unnamed" />
       <item index="2" class="java.lang.String" itemvalue="JAR Application.Unnamed" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.LCATest.testThree" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.LCATest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.LCATest.testOneNode" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.LCATest.testNegative" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.LCATest.testLCADAG" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.LCATest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.LCATest.testOneNode" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.LCATest.testNegative" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.LCATest.testLCADAG" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.LCATest.testDAG" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.LCATest.testLCADAG" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.LCATest.testNegative" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.LCATest.testOneNode" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.LCATest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.LCATest.testThree" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.LCATest.testDAG" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.LCATest.testLCADAG" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.LCATest.testNegative" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.LCATest.testOneNode" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.LCATest" />
       </list>
     </recent_temporary>
   </component>
@@ -430,17 +429,12 @@
       <workItem from="1569250828307" duration="4310000" />
       <workItem from="1569922693017" duration="4975000" />
       <workItem from="1570971630700" duration="2845000" />
-      <workItem from="1571325261940" duration="2512000" />
+      <workItem from="1571325261940" duration="3197000" />
+      <workItem from="1571412209075" duration="1384000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LCATest - 2019.10.01 at 11h 04m 03s.xml">
-      <configuration name="LCATest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LCATest - 2019.10.01 at 11h 05m 15s.xml">
-      <configuration name="LCATest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LCATest - 2019.10.01 at 11h 05m 42s.xml">
       <configuration name="LCATest" configurationId="JUnit" />
     </history-entry>
@@ -459,6 +453,12 @@
     <history-entry file="LCATest - 2019.10.01 at 11h 18m 14s.xml">
       <configuration name="LCATest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LCATest_testDAG - 2019.10.18 at 16h 49m 32s.xml">
+      <configuration name="LCATest.testDAG" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LCATest_testDAG - 2019.10.18 at 16h 50m 00s.xml">
+      <configuration name="LCATest.testDAG" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="LCATest_testLCADAG - 2019.10.17 at 16h 56m 15s.xml">
       <configuration name="LCATest.testLCADAG" configurationId="JUnit" />
     </history-entry>
@@ -467,7 +467,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14642000" />
+    <option name="totallyTimeSpent" value="16711000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -479,9 +479,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17432646" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17432646" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17432646" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17432646" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -516,6 +516,43 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/LCA.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="34" column="68" lean-forward="false" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#2209#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2856">
+          <caret line="178" column="1" lean-forward="false" selection-start-line="178" selection-start-column="1" selection-end-line="178" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#932#933#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#1937#1938#0" expanded="true" />
+            <element signature="e#1966#1967#0" expanded="true" />
+            <element signature="e#2003#2004#0" expanded="true" />
+            <element signature="e#2039#2040#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LCATest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2941">
+          <caret line="175" column="8" lean-forward="false" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LCA.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
           <folding>
@@ -539,9 +576,6 @@
             <element signature="e#1966#1967#0" expanded="true" />
             <element signature="e#2003#2004#0" expanded="true" />
             <element signature="e#2039#2040#0" expanded="true" />
-            <element signature="e#2461#2470#0" expanded="true" />
-            <element signature="e#2598#2607#0" expanded="true" />
-            <element signature="e#3862#3871#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -594,7 +628,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LCA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-526">
+        <state relative-caret-position="544">
           <caret line="34" column="68" lean-forward="false" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
           <folding>
             <element signature="e#0#2209#0" expanded="true" />
@@ -605,8 +639,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DAG.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3026">
-          <caret line="178" column="1" lean-forward="false" selection-start-line="178" selection-start-column="1" selection-end-line="178" selection-end-column="1" />
+        <state relative-caret-position="342">
+          <caret line="142" column="18" lean-forward="false" selection-start-line="142" selection-start-column="15" selection-end-line="142" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#860#861#0" expanded="true" />
@@ -617,17 +651,14 @@
             <element signature="e#1966#1967#0" expanded="true" />
             <element signature="e#2003#2004#0" expanded="true" />
             <element signature="e#2039#2040#0" expanded="true" />
-            <element signature="e#2461#2470#0" expanded="true" />
-            <element signature="e#2598#2607#0" expanded="true" />
-            <element signature="e#3862#3871#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LCATest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="167" column="25" lean-forward="false" selection-start-line="167" selection-start-column="25" selection-end-line="167" selection-end-column="25" />
+        <state relative-caret-position="337">
+          <caret line="182" column="37" lean-forward="false" selection-start-line="182" selection-start-column="37" selection-end-line="182" selection-end-column="37" />
           <folding />
         </state>
       </provider>
