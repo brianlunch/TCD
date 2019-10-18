@@ -20,8 +20,8 @@ public class LCA {
     public static class BT_NoParentPtr_Solution1 {
 
         Node root;
-        private List<Integer> path1 = new ArrayList<>();
-        private List<Integer> path2 = new ArrayList<>();
+        private static List<Integer> path1 = new ArrayList<>();
+        private static List<Integer> path2 = new ArrayList<>();
 
         // Finds the path from root node to given root of the tree.
         int findLCA(int n1, int n2) {
@@ -30,12 +30,10 @@ public class LCA {
             return findLCAInternal(root, n1, n2);
         }
 
-        private int findLCAInternal(Node root, int n1, int n2) {
+        private static int findLCAInternal(Node root, int n1, int n2) {
 
             if (!findPath(root, n1, path1) || !findPath(root, n2, path2)) {
-                System.out.println((path1.size() > 0) ? "n1 is present" : "n1 is missing");
-                System.out.println((path2.size() > 0) ? "n2 is present" : "n2 is missing");
-                return -1;
+
             }
 
             int i;
@@ -51,11 +49,8 @@ public class LCA {
 
         // Finds the path from root node to given root of the tree, Stores the
         // path in a vector path[], returns true if path exists otherwise false
-        private boolean findPath(Node root, int n, List<Integer> path) {
-            // base case
-            if (root == null) {
-                return false;
-            }
+        private static boolean findPath(Node root, int n, List<Integer> path) {
+
 
             // Store this node . The node will be removed if
             // not in path from root to n.
@@ -82,8 +77,5 @@ public class LCA {
 
         // Driver code
     }
-    public static void main(String[] args) {
 
-
-    }
 }
